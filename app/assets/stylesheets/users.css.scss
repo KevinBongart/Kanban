@@ -3,8 +3,13 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .inactive-users {
-  min-height: 40px;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
+  padding: 12px;
+  background-color: #EAEAEA;
+}
+
+.inactive-users h3 {
+  display: inline;
 }
 
 .users .photo {
@@ -16,8 +21,4 @@
   -moz-border-radius: 3px;
   border-radius: 3px;
   margin-right: 6px;
-}
-
-.inactive-users .photo {
-  margin-bottom: 6px;
 }

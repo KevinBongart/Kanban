@@ -1,17 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <div class="row">
+  <% if User.inactive.any? %>
+    <div class="users inactive-users clearfix">
+      <% User.inactive.each do |user| %>
+        <%= image_tag user.photo, :class => 'photo' %>
+      <% end %>
+      <h3>are ready to rock.</h3>
+    </div>
+  <% end %>
+
+
   <% @states.each do |state| %>
     <div class="span3">
       <h3><%= state.name %></h3>
-
-      <% if state.users.inactive.any? %>
-        <div class="users inactive-users clearfix">
-          <% state.users.inactive.each do |user| %>
-            <%= image_tag user.photo, :class => 'photo' %>
-          <% end %>
-        </div>
-      <% end %>
 
       <% if false #state.stories.fast_lane.any? %>
         <div class="fast-lane">
