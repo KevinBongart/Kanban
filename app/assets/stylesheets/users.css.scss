@@ -1,3 +1,23 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.inactive-users {
+  min-height: 40px;
+  margin-bottom: 24px;
+}
+
+.users .photo {
+  display: inline-block;
+  float: left;
+  max-height: 40px;
+  max-width: 40px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  margin-right: 6px;
+}
+
+.inactive-users .photo {
+  margin-bottom: 6px;
+}

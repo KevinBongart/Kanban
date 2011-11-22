@@ -5,6 +5,14 @@
     <div class="span3">
       <h3><%= state.name %></h3>
 
+      <% if state.users.inactive.any? %>
+        <div class="users inactive-users clearfix">
+          <% state.users.inactive.each do |user| %>
+            <%= image_tag user.photo, :class => 'photo' %>
+          <% end %>
+        </div>
+      <% end %>
+
       <% if false #state.stories.fast_lane.any? %>
         <div class="fast-lane">
           <h3>Fast lane</h3>
@@ -54,6 +62,11 @@
             <% end %>
           </div>
 
+          <% if story.tasks.any? %>
+            <span class="progress">
+              <%= "#{story.tasks.complete.size}/#{story.tasks.size}"%>
+            </span>
+          <% end %>
         </div>
       <% end %>
 

@@ -15,6 +15,7 @@ class ProjectsController < ApplicationController
   def show
     @project = Project.find(params[:id])
     @states  = State.all
+    @inactive_users = User.inactive
 
     respond_to do |format|
       format.html # show.html.erb

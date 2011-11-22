@@ -33,7 +33,7 @@ story3 = Story.create(
   :state => qa
 )
 
-Story.create(
+story5 = Story.create(
   :name => 'Merge the link to the manage area into the challenges dropdown',
   :project => project,
   :state => deploy
@@ -66,7 +66,8 @@ Story.create(
 
 Task.create(
   :name => 'Store challenge recommendations in Redis',
-  :story => story
+  :story => story,
+  :done => true
 )
 
 Task.create(
@@ -96,12 +97,14 @@ AttachedImage.create(
 
 Task.create(
   :name => 'Store challenge recommendations in Redis',
-  :story => story3
+  :story => story3,
+  :done => true
 )
 
 Task.create(
   :name => 'Integrates with user dashboard',
-  :story => story3
+  :story => story3,
+  :done => true
 )
 
 AttachedCopy.create(
@@ -111,33 +114,39 @@ AttachedCopy.create(
 
 Task.create(
   :name => 'Store challenge recommendations in Redis',
-  :story => story4
+  :story => story4,
+  :done => true
 )
 
 Task.create(
   :name => 'Integrates with user dashboard',
-  :story => story4
+  :story => story4,
+  :done => true
 )
 
 Task.create(
   :name => 'Store challenge recommendations in Redis',
-  :story => story4
+  :story => story4,
+  :done => true
 )
 
 Task.create(
   :name => 'Integrates with user dashboard',
-  :story => story4
+  :story => story4,
+  :done => true
 )
 
 
 Task.create(
   :name => 'Store challenge recommendations in Redis',
-  :story => story4
+  :story => story4,
+  :done => true
 )
 
 Task.create(
   :name => 'Integrates with user dashboard',
-  :story => story4
+  :story => story4,
+  :done => true
 )
 
 AttachedImage.create(
@@ -153,16 +162,46 @@ AttachedCopy.create(
 User.create(
   :name => 'Kevin',
   :photo => 'http://f.cl.ly/items/0h09271X2O0h0A0c0a2H/Kevin%20-%20Avatar%20Clark%20Kent.png',
-  :story => story
+  :state => development
 )
 
 User.create(
-  :name => 'Blair',
-  :photo => 'http://f.cl.ly/items/0h09271X2O0h0A0c0a2H/Kevin%20-%20Avatar%20Clark%20Kent.png',
-  :story => story
+  :name => 'John',
+  :photo => 'http://f.cl.ly/items/2w2N3S0j38002a361W1o/381454_10150364376592669_507347668_8448500_1026565696_n.jpg',
+  :story => story2,
+  :state => development
 )
 
 User.create(
-  :name => 'N00b',
-  :photo => 'http://f.cl.ly/items/0h09271X2O0h0A0c0a2H/Kevin%20-%20Avatar%20Clark%20Kent.png'
+  :name => 'Juan',
+  :photo => 'http://f.cl.ly/items/232b1i3u2h0z1W1a0e1a/Juan-headshot-1.png',
+  :story => story,
+  :state => development
+)
+
+User.create(
+  :name => 'Stefano',
+  :photo => 'http://f.cl.ly/items/0O0g143p2b3U1p3d371N/stefano_ballabeni_large.jpg',
+  :story => story2,
+  :state => development
+)
+
+User.create(
+  :name => 'Ross',
+  :photo => 'http://f.cl.ly/items/202H0j1v2T2l0B363m2P/RossGeller.jpg',
+  :story => story,
+  :state => development
+)
+
+User.create(
+  :name => 'Robin',
+  :photo => 'http://f.cl.ly/items/2m0S030H1H1U261Q1Y11/robin-boutros.png',
+  :state => development
+)
+
+User.create(
+  :name => 'Nikki',
+  :photo => 'http://f.cl.ly/items/1X3O1f3q042B3e362935/Screen%20Shot%202011-11-22%20at%2012.42.32%20AM.png',
+  :story => story5,
+  :state => qa
 )

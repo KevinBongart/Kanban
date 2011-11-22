@@ -76,13 +76,17 @@
   width: 100%;
 }
 
-.users .photo {
-  display: inline-block;
-  float: left;
-  max-height: 32px;
-  max-width: 32px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  margin-right: 6px;
+.stack .progress {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: black;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  border-radius: 16px;
+  color: white;
+  font-size: 12px;
+  padding: 8px;
+  height: 16px;
+  width: 16px;
 }
