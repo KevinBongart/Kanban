@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Content:</b>
+  <%= @attached_copy.content %>
+</p>
+
+<p>
+  <b>Story:</b>
+  <%= @attached_copy.story_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_attached_copy_path(@attached_copy) %> |
+<%= link_to 'Back', attached_copies_path %>

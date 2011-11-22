@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Url:</b>
+  <%= @attached_image.url %>
+</p>
+
+<p>
+  <b>Story:</b>
+  <%= @attached_image.story_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_attached_image_path(@attached_image) %> |
+<%= link_to 'Back', attached_images_path %>

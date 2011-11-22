@@ -1,0 +1,25 @@
+<h1>Listing attached_images</h1>
+
+<table>
+  <tr>
+    <th>Url</th>
+    <th>Story</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @attached_images.each do |attached_image| %>
+  <tr>
+    <td><%= attached_image.url %></td>
+    <td><%= attached_image.story_id %></td>
+    <td><%= link_to 'Show', attached_image %></td>
+    <td><%= link_to 'Edit', edit_attached_image_path(attached_image) %></td>
+    <td><%= link_to 'Destroy', attached_image, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Attached image', new_attached_image_path %>

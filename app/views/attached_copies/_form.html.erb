@@ -1,0 +1,25 @@
+<%= form_for(@attached_copy) do |f| %>
+  <% if @attached_copy.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@attached_copy.errors.count, "error") %> prohibited this attached_copy from being saved:</h2>
+
+      <ul>
+      <% @attached_copy.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :content %><br />
+    <%= f.text_area :content %>
+  </div>
+  <div class="field">
+    <%= f.label :story_id %><br />
+    <%= f.number_field :story_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

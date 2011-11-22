@@ -1,0 +1,88 @@
+.stack {
+  position: relative;
+  height: 100px;
+  width: 160px;
+  margin-bottom: 32px;
+  background-color: white;
+}
+
+.stack .card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 80px;
+  width: 140px;
+  border: 1px solid #CCCCCC;
+  padding: 10px;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 4px #CCC;
+     -moz-box-shadow: 0px 0px 4px #CCC;
+          box-shadow: 0px 0px 4px #CCC;
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+          border-radius: 2px;
+}
+
+.stack .card .inside {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.stack .card.image img {
+  max-height: 60px;
+  max-width: 140px;
+}
+
+.stack .card.rotate-1 {
+  -webkit-transform: rotate(5deg);
+     -moz-transform: rotate(5deg);
+          transform: rotate(5deg);
+}
+
+.stack .card.rotate-2 {
+  -webkit-transform: rotate(10deg);
+     -moz-transform: rotate(10deg);
+          transform: rotate(10deg);
+}
+
+.stack .card.rotate-3 {
+  -webkit-transform: rotate(7deg);
+     -moz-transform: rotate(7deg);
+          transform: rotate(7deg);
+}
+.stack .card.rotate-4 {
+  -webkit-transform: rotate(-3deg);
+     -moz-transform: rotate(-3deg);
+          transform: rotate(-3deg);
+}
+
+.stack .card.rotate-5 {
+  -webkit-transform: rotate(-5deg);
+     -moz-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+}
+
+.stack .card.rotate-6 {
+  -webkit-transform: rotate(-7deg);
+     -moz-transform: rotate(-7deg);
+          transform: rotate(-7deg);
+}
+
+.stack .users {
+  position: absolute;
+  bottom: -10px;
+  left: 10px;
+  width: 100%;
+}
+
+.users .photo {
+  display: inline-block;
+  float: left;
+  max-height: 32px;
+  max-width: 32px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  margin-right: 6px;
+}
