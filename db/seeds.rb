@@ -45,6 +45,36 @@ story4 = Story.create(
   :state => done
 )
 
+story6 = Story.create(
+  :name => 'Do never deploy this',
+  :project => project,
+  :state => done
+)
+
+story7 = Story.create(
+  :name => 'Make this cool thing happen',
+  :project => project,
+  :state => done
+)
+
+story8 = Story.create(
+  :name => 'Clicking on any link goes on 404',
+  :project => project,
+  :state => done
+)
+
+story9 = Story.create(
+  :name => 'Host main app on TI-83',
+  :project => project,
+  :state => done
+)
+
+story10 = Story.create(
+  :name => 'Homepage redesign',
+  :project => project,
+  :state => done
+)
+
 Story.create(
   :name => 'Segment users by rollout feature in google analytics',
   :project => project,
@@ -149,6 +179,101 @@ Task.create(
   :done => true
 )
 
+Task.create(
+  :name => 'Integrates with user dashboard',
+  :story => story6,
+  :done => true
+)
+
+
+Task.create(
+  :name => 'Store challenge recommendations in Redis',
+  :story => story6,
+  :done => true
+)
+
+Task.create(
+  :name => 'Integrates with user dashboard',
+  :story => story6,
+  :done => true
+)
+
+Task.create(
+  :name => 'Integrates with user dashboard',
+  :story => story7,
+  :done => true
+)
+
+
+Task.create(
+  :name => 'Store challenge recommendations in Redis',
+  :story => story8,
+  :done => true
+)
+
+Task.create(
+  :name => 'Integrates with user dashboard',
+  :story => story8,
+  :done => true
+)
+
+Task.create(
+  :name => 'Integrates with user dashboard',
+  :story => story9,
+  :done => true
+)
+
+
+Task.create(
+  :name => 'Store challenge recommendations in Redis',
+  :story => story9,
+  :done => true
+)
+
+Task.create(
+  :name => 'Integrates with user dashboard',
+  :story => story9,
+  :done => true
+)
+
+Task.create(
+  :name => 'Integrates with user dashboard',
+  :story => story9,
+  :done => true
+)
+
+
+Task.create(
+  :name => 'Store challenge recommendations in Redis',
+  :story => story9,
+  :done => true
+)
+
+Task.create(
+  :name => 'Integrates with user dashboard',
+  :story => story9,
+  :done => true
+)
+
+Task.create(
+  :name => 'Integrates with user dashboard',
+  :story => story9,
+  :done => true
+)
+
+
+Task.create(
+  :name => 'Store challenge recommendations in Redis',
+  :story => story9,
+  :done => true
+)
+
+Task.create(
+  :name => 'Integrates with user dashboard',
+  :story => story10,
+  :done => true
+)
+
 AttachedImage.create(
   :url => 'http://f.cl.ly/items/3p3s3q0G1X1U26090T1G/Screen%20Shot%202011-11-21%20at%2010.39.24%20PM.png',
   :story => story4
@@ -202,6 +327,6 @@ User.create(
 User.create(
   :name => 'Nikki',
   :photo => 'http://f.cl.ly/items/1X3O1f3q042B3e362935/Screen%20Shot%202011-11-22%20at%2012.42.32%20AM.png',
-  :story => story5,
+  :story => story3,
   :state => qa
 )
