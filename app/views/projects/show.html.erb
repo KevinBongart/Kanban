@@ -6,7 +6,7 @@
       <% User.inactive.each do |user| %>
         <%= image_tag user.photo, :class => 'photo' %>
       <% end %>
-      <h3>are ready to rock.</h3>
+      <h3>are slacking off.</h3>
     </div>
   <% end %>
 
@@ -22,7 +22,7 @@
             <div class="well">
               <%= link_to story.name, story %>
             </div>
-          <% end %>          
+          <% end %>
         </div>
       <% end %>
 
@@ -54,7 +54,7 @@
 
           <div class="card story">
             <div class="inside">
-              <%= link_to story.name, story %>                          
+              <%= link_to story.name, story %>
             </div>
           </div>
 
@@ -65,7 +65,10 @@
           </div>
 
           <% if story.tasks.any? %>
-            <span class="progress">
+            <% if story.tasks.complete.size > 0 %>
+              <% progress = story.tasks.complete.size == story.tasks.size ? 'done' : 'in-progress' %>
+            <% end %>
+            <span class="progress <%= progress if progress %>">
               <%= "#{story.tasks.complete.size}/#{story.tasks.size}"%>
             </span>
           <% end %>
@@ -79,7 +82,7 @@
             <div class="well">
               <%= link_to story.name, story %>
             </div>
-          <% end %>          
+          <% end %>
         </div>
       <% end %>
     </div>

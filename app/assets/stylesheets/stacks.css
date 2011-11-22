@@ -15,9 +15,9 @@
   border: 1px solid #CCCCCC;
   padding: 10px;
   background-color: white;
-  -webkit-box-shadow: 0px 0px 4px #CCC;
-     -moz-box-shadow: 0px 0px 4px #CCC;
-          box-shadow: 0px 0px 4px #CCC;
+  -webkit-box-shadow: 0px 0px 1px #CCC;
+     -moz-box-shadow: 0px 0px 1px #CCC;
+          box-shadow: 0px 0px 1px #CCC;
   -webkit-border-radius: 2px;
      -moz-border-radius: 2px;
           border-radius: 2px;
@@ -80,13 +80,25 @@
   position: absolute;
   top: -10px;
   right: -10px;
-  background-color: black;
+  background-color: #FF3B52;
   -webkit-border-radius: 16px;
   -moz-border-radius: 16px;
   border-radius: 16px;
-  color: white;
+  font-weight: bold;
   font-size: 12px;
   padding: 8px;
   height: 16px;
   width: 16px;
+  color: white;
+  -webkit-box-shadow: 1px 1px 3px #3B3B3B;
+     -moz-box-shadow: 1px 1px 3px #3B3B3B;
+          box-shadow: 1px 1px 3px #3B3B3B;
+}
+
+.stack .progress.in-progress {
+  background-color: #F7C93E;
+}
+
+.stack .progress.done {
+  background-color: #42C282;
 }

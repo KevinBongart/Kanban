@@ -22,3 +22,12 @@
 .clearfix {
     zoom:1;
 }
+
+body {
+  background-image: url(/images/roughcloth.png);
+  background-repeat: repeat;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #3B3B3B;
+}

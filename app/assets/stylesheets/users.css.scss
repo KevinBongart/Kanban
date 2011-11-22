@@ -5,11 +5,11 @@
 .inactive-users {
   margin-bottom: 12px;
   padding: 12px;
-  background-color: #EAEAEA;
 }
 
 .inactive-users h3 {
   display: inline;
+  font-family: helvetica, arial, sans-serif;
 }
 
 .users .photo {
@@ -17,8 +17,9 @@
   float: left;
   max-height: 40px;
   max-width: 40px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
   margin-right: 6px;
+  border: 2px solid white;
+  -webkit-box-shadow: 0px 0px 2px #444;
+     -moz-box-shadow: 0px 0px 2px #444;
+          box-shadow: 0px 0px 2px #444;
 }
