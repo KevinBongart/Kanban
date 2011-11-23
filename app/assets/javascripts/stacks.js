@@ -1,3 +1,5 @@
-$('.stack').click(function() {
-  console.log("lol");
+$(function() {
+  $('.stack').click(function() {
+    console.log("lol");
+  });
 });

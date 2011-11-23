@@ -1,0 +1,32 @@
+<div class="stack">
+  <% story.attached_copies.each do |copy| %>
+    <%= render 'stacks/card', :card => copy %>
+  <% end %>
+
+  <% story.attached_images.each do |image| %>
+    <%= render 'stacks/card', :card => image %>
+  <% end %>
+
+  <% story.tasks.each do |task| %>
+    <%= render 'stacks/card', :card => task %>
+  <% end %>
+
+  <%= div_for_card story do %>
+    <%= render 'stacks/card', :card => story %>
+  <% end %>
+
+  <div class="users">
+    <% story.users.each do |user| %>
+      <%= image_tag user.photo, :class => 'photo' %>
+    <% end %>
+  </div>
+
+  <% if story.tasks.any? %>
+    <% if story.tasks.complete.size > 0 %>
+      <% progress = story.tasks.complete.size == story.tasks.size ? 'done' : 'in-progress' %>
+    <% end %>
+    <span class="progress <%= progress if progress %>">
+      <%= "#{story.tasks.complete.size}/#{story.tasks.size}"%>
+    </span>
+  <% end %>
+</div>

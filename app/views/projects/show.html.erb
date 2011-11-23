@@ -15,76 +15,10 @@
     <div class="span3">
       <h3><%= state.name %></h3>
 
-      <% if false #state.stories.fast_lane.any? %>
-        <div class="fast-lane">
-          <h3>Fast lane</h3>
-          <% state.stories.fast_lane.each do |story| %>
-            <div class="well">
-              <%= link_to story.name, story %>
-            </div>
-          <% end %>
-        </div>
-      <% end %>
-
       <% state.stories.normal.each do |story| %>
-        <div class="stack">
-          <% story.attached_copies.each do |copy| %>
-            <div class="card copy <%= 'rotate-' + (rand(6) + 1).to_s %>">
-              <div class="inside">
-                <p><%= copy.content %></p>
-              </div>
-            </div>
-          <% end %>
-
-          <% story.attached_images.each do |image| %>
-            <div class="card image <%= 'rotate-' + (rand(6) + 1).to_s %>">
-              <div class="inside">
-                <%= image_tag image.url %>
-              </div>
-            </div>
-          <% end %>
-
-          <% story.tasks.each do |task| %>
-            <div class="card task <%= 'rotate-' + (rand(6) + 1).to_s %>">
-              <div class="inside">
-                <p><%= task.name %></p>
-              </div>
-            </div>
-          <% end %>
-
-          <div class="card story">
-            <div class="inside">
-              <%= link_to story.name, story %>
-            </div>
-          </div>
-
-          <div class="users">
-            <% story.users.each do |user| %>
-              <%= image_tag user.photo, :class => 'photo' %>
-            <% end %>
-          </div>
-
-          <% if story.tasks.any? %>
-            <% if story.tasks.complete.size > 0 %>
-              <% progress = story.tasks.complete.size == story.tasks.size ? 'done' : 'in-progress' %>
-            <% end %>
-            <span class="progress <%= progress if progress %>">
-              <%= "#{story.tasks.complete.size}/#{story.tasks.size}"%>
-            </span>
-          <% end %>
-        </div>
+        <%= render 'stacks/stack', :story => story %>
       <% end %>
 
-      <% if false #state.stories.icebox.any? %>
-        <div class="icebox">
-          <h3>Icebox</h3>
-          <% state.stories.icebox.each do |story| %>
-            <div class="well">
-              <%= link_to story.name, story %>
-            </div>
-          <% end %>
-        </div>
-      <% end %>
     </div>
   <% end %>
 </div>
