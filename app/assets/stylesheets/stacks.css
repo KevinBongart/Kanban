@@ -31,9 +31,9 @@
   float: left;
   margin-left: 20px;
   margin-bottom: 20px;
-  -webkit-box-shadow: 2px 2px 4px #CCC;
-     -moz-box-shadow: 2px 2px 4px #CCC;
-          box-shadow: 2px 2px 4px #CCC;
+  -webkit-box-shadow: 0 0 0;
+     -moz-box-shadow: 0 0 0;
+          box-shadow: 0 0 0;
 }
 
 .stack .card.attached_image,
@@ -128,10 +128,21 @@
   -webkit-transform: rotate(0deg);
      -moz-transform: rotate(0deg);
           transform: rotate(0deg);
+
 }
 
 #expanded-stack {
   display: none;
   position: absolute;
-  width: 900px;
+  width: 920px;
+  background-color: #3B3B3B;
+  opacity: 0.9;
+  border: 4px solid white;
+  padding-top: 16px;
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
+  -webkit-box-shadow: 0 0 10px #3B3B3B;
+     -moz-box-shadow: 0 0 10px #3B3B3B;
+          box-shadow: 0 0 10px #3B3B3B;
 }

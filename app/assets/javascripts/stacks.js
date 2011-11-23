@@ -1,15 +1,27 @@
 $(function() {
   $('.story').click(function() {
-    var stack = $(this).parent();
     var expanded_stack = $('#expanded-stack');
-    var cards = stack.find('.attached-card');
+    var stack = $(this).parent();
 
-    stack.toggleClass('expanded');
-    cards.prependTo(expanded_stack);
-    cards.reverseOrder();
-    expanded_stack.css('top', stack.position().top + 132);
-    expanded_stack.toggle();
-    cards.offset(stack.offset());
-    cards.animate({ top: 0, left: 0 }, 300);
+    if (stack.hasClass('expanded')) {
+      var cards = expanded_stack.find('.attached-card');
+      if (cards.length > 0) {
+        cards.prependTo(stack);
+        cards.css('position', 'absolute');
+        cards.reverseOrder();
+        expanded_stack.toggle();
+        stack.toggleClass('expanded');
+      }      
+    } else {
+      var cards = stack.find('.attached-card');
+      if (cards.length > 0) {
+        cards.prependTo(expanded_stack);
+        cards.css('position', 'relative');
+        cards.reverseOrder();
+        expanded_stack.css('top', stack.position().top + 132);
+        expanded_stack.toggle();
+        stack.toggleClass('expanded');
+      }
+    }
   });
 });
