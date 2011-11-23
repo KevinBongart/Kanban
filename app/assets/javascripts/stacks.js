@@ -18,7 +18,7 @@ $(function() {
         cards.prependTo(expanded_stack);
         cards.css('position', 'relative');
         cards.reverseOrder();
-        expanded_stack.css('top', stack.position().top + 132);
+        expanded_stack.css('top', stack.position().top + 114);
         expanded_stack.toggle();
         stack.toggleClass('expanded');
       }
