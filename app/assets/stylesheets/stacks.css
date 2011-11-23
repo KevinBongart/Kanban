@@ -5,10 +5,8 @@
   margin-bottom: 32px;
 }
 
-.stack .card {
-  position: absolute;
-  top: 0;
-  left: 0;
+.stack .card,
+#expanded-stack .card {
   height: 80px;
   width: 140px;
   border: 1px solid #CCCCCC;
@@ -23,13 +21,30 @@
           border-radius: 2px;
 }
 
-.stack .card.attached_image {
+.stack .card {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#expanded-stack .card {
+  float: left;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  -webkit-box-shadow: 2px 2px 4px #CCC;
+     -moz-box-shadow: 2px 2px 4px #CCC;
+          box-shadow: 2px 2px 4px #CCC;
+}
+
+.stack .card.attached_image,
+#expanded-stack .card.attached_image {
   padding: 0;
   width: 160px;
   height: 100px;
 }
 
-.stack .card.attached_image img {
+.stack .card.attached_image img,
+#expanded-stack .card.attached_image img {
   max-height: 120px;
   max-width: 280px;
 }
@@ -113,4 +128,10 @@
   -webkit-transform: rotate(0deg);
      -moz-transform: rotate(0deg);
           transform: rotate(0deg);
+}
+
+#expanded-stack {
+  display: none;
+  position: absolute;
+  width: 900px;
 }
