@@ -1,9 +1,8 @@
 .stack {
   position: relative;
-  height: 100px;
+  min-height: 100px;
   width: 160px;
   margin-bottom: 32px;
-  background-color: white;
 }
 
 .stack .card {
@@ -26,8 +25,8 @@
 
 .stack .card.attached_image {
   padding: 0;
-  width: 100%;
-  height: 100%;
+  width: 160px;
+  height: 100px;
 }
 
 .stack .card.attached_image img {
@@ -72,7 +71,7 @@
 
 .stack .users {
   position: absolute;
-  bottom: -10px;
+  top: 75px;
   left: 10px;
   width: 100%;
 }
@@ -102,4 +101,16 @@
 
 .stack .progress.done {
   background-color: #42C282;
+}
+
+.stack.expanded {
+  margin-bottom: 32px;
+}
+
+.stack.expanded .card {
+  position: relative;
+  margin-bottom: 8px;
+  -webkit-transform: rotate(0deg);
+     -moz-transform: rotate(0deg);
+          transform: rotate(0deg);
 }

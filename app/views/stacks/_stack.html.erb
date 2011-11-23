@@ -1,4 +1,4 @@
-<div class="stack">
+<div class="stack" id="<%= "stack_#{story.id}" %>">
   <% story.attached_copies.each do |copy| %>
     <%= render 'stacks/card', :card => copy %>
   <% end %>
@@ -11,9 +11,7 @@
     <%= render 'stacks/card', :card => task %>
   <% end %>
 
-  <%= div_for_card story do %>
-    <%= render 'stacks/card', :card => story %>
-  <% end %>
+  <%= render 'stacks/card', :card => story %>
 
   <div class="users">
     <% story.users.each do |user| %>

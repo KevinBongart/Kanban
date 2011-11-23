@@ -6,5 +6,6 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.reverseorder
 //= require twitter/bootstrap
 //= require_tree .
