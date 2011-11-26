@@ -27,6 +27,7 @@ $(function() {
 
   $('.state').sortable({
     connectWith:['.state'],
+    cursor: 'move',
     items: 'li',
     update: function(){
       var data = {};

@@ -6,6 +6,6 @@
   <% elsif card.is_a?(Task) %>
     <p><%= card.name %></p>
   <% elsif card.is_a?(Story) %>
-    <%= link_to card.name, card %>
+    <p><%= card.name %></p>
   <% end %>
 <% end %>
