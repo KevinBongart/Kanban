@@ -1,14 +1,12 @@
 Kanban::Application.routes.draw do
-  resources :users
-
   resources :attached_copies
   resources :attached_images
-  resources :tasks
-  resources :states
   resources :projects
-  resources :stories do
+  resources :states
+  resources :stories, :users do
     post :sort, :on => :collection
   end
+  resources :tasks
 
   root :to => 'projects#show', :id => 1
 end

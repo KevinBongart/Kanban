@@ -80,4 +80,17 @@ class UsersController < ApplicationController
       format.json { head :ok }
     end
   end
+
+  def sort
+    unless params[:users].blank?
+      user_ids = params[:users].map {|i| i.scan(/\d+/).first}
+      story_id = params[:story].scan(/\d+/).first
+
+      User.find(user_ids).each_with_index do |user, i|
+        user.update_attributes(:story_id => story_id)
+      end
+    end
+
+    render :nothing => true
+  end
 end

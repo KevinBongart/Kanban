@@ -42,4 +42,22 @@ $(function() {
       })
     }
   });
+
+  $('.users').sortable({
+    connectWith:['.users'],
+    cursor: 'move',
+    items: 'img',
+    update: function(){
+      var data = {};
+      data['story'] = $(this).attr('id');
+      data['users'] = $(this).sortable('toArray');
+
+      $.ajax({
+        type: 'post',
+        data: data,
+        dataType: 'script',
+        url: '/users/sort'
+      })
+    }
+  });
 });
