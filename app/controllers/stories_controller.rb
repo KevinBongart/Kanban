@@ -80,4 +80,15 @@ class StoriesController < ApplicationController
       format.json { head :ok }
     end
   end
+
+  def sort
+    story_ids = params[:stories].map {|i| i.scan(/\d+/).first}
+    state_id  = params[:state].scan(/\d+/).first
+
+    Story.find(story_ids).each_with_index do |story, i|
+      story.update_attributes(:position => i, :state_id => state_id)
+    end
+
+    render :nothing => true
+  end
 end

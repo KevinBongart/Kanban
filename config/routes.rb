@@ -5,8 +5,10 @@ Kanban::Application.routes.draw do
   resources :attached_images
   resources :tasks
   resources :states
-  resources :stories
   resources :projects
+  resources :stories do
+    post :sort, :on => :collection
+  end
 
   root :to => 'projects#show', :id => 1
 end

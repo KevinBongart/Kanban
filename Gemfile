@@ -5,6 +5,7 @@ gem 'sqlite3'
 gem 'json'
 gem 'jquery-rails'
 gem 'twitter-bootstrap-rails'
+gem "acts_as_list"
 
 group :assets do
   gem 'sass-rails',   '~> 3.1.5.rc.2'

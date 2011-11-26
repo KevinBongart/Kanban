@@ -24,4 +24,21 @@ $(function() {
       }
     }
   });
+
+  $('.state').sortable({
+    connectWith:['.state'],
+    items: 'li',
+    update: function(){
+      var data = {};
+      data['state']   = $(this).attr('id');
+      data['stories'] = $(this).sortable('toArray');
+
+      $.ajax({
+        type: 'post',
+        data: data,
+        dataType: 'script',
+        url: '/stories/sort'
+      })
+    }
+  });
 });

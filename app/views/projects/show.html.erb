@@ -12,14 +12,13 @@
 
 
   <% @states.each do |state| %>
-    <div class="span3">
+    <%= content_tag_for :ul, state, :class => 'span3' do %>
       <h3><%= state.name %></h3>
 
       <% state.stories.normal.each do |story| %>
         <%= render 'stacks/stack', :story => story %>
       <% end %>
-
-    </div>
+    <% end %>
   <% end %>
 
   <div id="expanded-stack" />

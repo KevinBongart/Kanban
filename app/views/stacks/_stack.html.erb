@@ -1,4 +1,4 @@
-<div class="stack" id="<%= "stack_#{story.id}" %>">
+<li class="stack" id="<%= "stack_#{story.id}" %>">
   <% story.attached_copies.each do |copy| %>
     <%= render 'stacks/card', :card => copy %>
   <% end %>
@@ -27,4 +27,4 @@
       <%= "#{story.tasks.complete.size}/#{story.tasks.size}"%>
     </span>
   <% end %>
-</div>
+</li>
