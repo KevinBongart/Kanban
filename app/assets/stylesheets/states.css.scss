@@ -1,3 +1,20 @@
 ul.state {
   list-style-type: none;
+  margin: 0;
+  position: relative;
+  min-height: 100px;
+}
+
+ul.state .drop-zone {
+  display: none;
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  bottom: -34px;
+  left: -6px;
+  border: 2px dashed #42C282;
+  background: white;
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
 }

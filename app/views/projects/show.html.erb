@@ -1,23 +1,32 @@
 <p id="notice"><%= notice %></p>
 
 <div class="row">
-  <% if User.inactive.any? %>
-    <div class="users clearfix" id="inactive-users">
-      <% User.inactive.each do |user| %>
-        <%= image_tag user.photo, :class => 'user photo', :id => "user_#{user.id}" %>
+  <div class="users clearfix" id="inactive-users">
+    <% User.inactive.each do |user| %>
+      <%= image_tag user.photo, :class => 'user photo', :id => "user_#{user.id}" %>
+    <% end %>
+    <h3>
+      <% if User.inactive.size == 0 %>
+        Nobody is
+      <% elsif User.inactive.size == 1 %>
+        is
+      <% else %>
+        are
       <% end %>
-      <h3>are slacking off.</h3>
-    </div>
-  <% end %>
+      slacking off.
+    </h3>
+  </div>
 
   <% @states.each do |state| %>
-    <%= content_tag_for :ul, state, :class => 'span3' do %>
+    <div class="span3">
       <h3><%= state.name %></h3>
-
-      <% state.stories.normal.each do |story| %>
-        <%= render 'stacks/stack', :story => story %>
+      <%= content_tag_for :ul, state do %>
+      <div class="drop-zone"></div>
+        <% state.stories.normal.each do |story| %>
+          <%= render 'stacks/stack', :story => story %>
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
   <% end %>
 
   <div id="expanded-stack" />
