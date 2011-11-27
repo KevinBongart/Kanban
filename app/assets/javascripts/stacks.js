@@ -11,7 +11,7 @@ $(function() {
       text = 'is slacking off';
       break;
     default:
-      text = 'are slacking off;
+      text = 'are slacking off';
     }
 
     $('#inactive-users h3').html(text);
