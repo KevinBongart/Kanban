@@ -3,6 +3,7 @@ ul.state {
   margin: 0;
   position: relative;
   min-height: 100px;
+  padding-bottom: 32px;
 }
 
 ul.state .drop-zone {
@@ -17,4 +18,8 @@ ul.state .drop-zone {
   -webkit-border-radius: 8px;
      -moz-border-radius: 8px;
           border-radius: 8px;
+}
+
+ul.state.droppable .drop-zone {
+  display: block;
 }

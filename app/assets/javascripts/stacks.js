@@ -47,11 +47,11 @@ $(function() {
     connectWith:['.state'],
     cursor: 'move',
     items: 'li',
-    start: function(){
-      $('.state .drop-zone').toggle();
+    over: function(){
+      $(this).addClass('droppable');
     },
-    stop: function(){
-      $('.state .drop-zone').toggle();
+    out: function(){
+      $(this).removeClass('droppable');
     },
     update: function(){
       var data = {};
@@ -71,11 +71,13 @@ $(function() {
     connectWith:['.users'],
     cursor: 'move',
     items: 'img',
-    start: function(){
-      $('.users').addClass('enabled');
+    over: function(){
+      $(this).addClass('droppable');
+    },
+    out: function(){
+      $(this).removeClass('droppable');
     },
     stop: function(){
-      $('.users').removeClass('enabled');
       update_inactive_users_text();
     },
     update: function(){
