@@ -21,3 +21,18 @@ h4 {
   font-size: 20px;
   letter-spacing: 1px;
 }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+.comment {
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #3B3B3B;
+}
+
+.comment.last {
+  border-bottom: none;
+}

@@ -1,6 +1,9 @@
 <div id="header">
   <h3><%= @story.name %></h3>
-  <p>Requested by <%= link_to @story.user.name, @story.user.photo %></p>
+  <p>
+    Requested by <%= link_to @story.user.name, @story.user.photo %>
+    <%= time_ago_in_words(@story.created_at) %> ago
+  </p>
   <div class="users clearfix story-page">
     <% @story.users.each do |user| %>
       <%= image_tag user.photo, :class => 'user photo', :id => "user_#{user.id}" %>
@@ -13,8 +16,8 @@
 <ul>
   <% @story.tasks.each do |task| %>
     <li>
-      <input type="checkbox" <%= "checked" if task.done %> />
-      <%= task.name %>
+      <p><input type="checkbox" <%= "checked" if task.done %> />
+      <%= task.name %></p>
     </li>
   <% end %>
 </ul>
@@ -29,12 +32,22 @@
 <% end %>
 
 <% if @story.attached_copies.any? %>
-  <h4>Copies</h4>
+  <h4>Copy</h4>
   <% @story.attached_copies.each do |copy| %>
     <p><%= copy.content %></p>
   <% end %>
 <% end %>
 
 <h4>Comments</h4>
+
+<% @story.comments.each do |comment| %>
+    <%= div_for comment, :class => (comment == @story.comments.last ? 'last' : '') do %>
+      <%= image_tag comment.user.photo, :class => 'photo' %>
+      <div class="inside-comment">
+        <p><strong><%= comment.user.name %></strong> <%= time_ago_in_words(comment.created_at) %> ago</p>
+        <%= comment.body %>
+      </div>      
+    <% end %>
+<% end %>
 
 <%= link_to 'Back', root_path %>

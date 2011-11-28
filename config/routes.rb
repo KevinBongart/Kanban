@@ -1,4 +1,6 @@
 Kanban::Application.routes.draw do
+  resources :comments
+
   resources :attached_copies
   resources :attached_images
   resources :projects

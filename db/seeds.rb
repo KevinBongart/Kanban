@@ -317,7 +317,7 @@ User.create(
   :state => development
 )
 
-User.create(
+juan = User.create(
   :name => 'Juan',
   :photo => 'http://f.cl.ly/items/232b1i3u2h0z1W1a0e1a/Juan-headshot-1.png',
   :story => story,
@@ -344,9 +344,32 @@ User.create(
   :state => development
 )
 
-User.create(
+nikki = User.create(
   :name => 'Nikki',
   :photo => 'http://f.cl.ly/items/1X3O1f3q042B3e362935/Screen%20Shot%202011-11-22%20at%2012.42.32%20AM.png',
   :story => story3,
   :state => qa
+)
+
+holly = User.create(
+  :name => 'Holly',
+  :photo => 'http://f.cl.ly/items/2E0R211L1K2K3B0I2304/Screen%20Shot%202011-11-28%20at%201.10.25%20AM.png'
+)
+
+Comment.create(
+  :story => story,
+  :user => holly,
+  :body => "That's not Helvetica!"
+)
+
+Comment.create(
+  :story => story,
+  :user => juan,
+  :body => "WHAT NOW?"
+)
+
+Comment.create(
+  :story => story,
+  :user => colin,
+  :body => "LOL."
 )

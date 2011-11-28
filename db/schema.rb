@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111128054741) do
+ActiveRecord::Schema.define(:version => 20111128060848) do
 
   create_table "attached_copies", :force => true do |t|
     t.text     "content"
@@ -21,6 +21,14 @@ ActiveRecord::Schema.define(:version => 20111128054741) do
 
   create_table "attached_images", :force => true do |t|
     t.string   "url"
+    t.integer  "story_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "comments", :force => true do |t|
+    t.text     "body"
+    t.integer  "user_id"
     t.integer  "story_id"
     t.datetime "created_at"
     t.datetime "updated_at"

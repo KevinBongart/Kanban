@@ -16,7 +16,8 @@
   font-family: helvetica, arial, sans-serif;
 }
 
-.users .photo {
+.users .photo,
+.comment .photo {
   display: inline-block;
   float: left;
   max-height: 40px;
