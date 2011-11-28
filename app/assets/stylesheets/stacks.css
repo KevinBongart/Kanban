@@ -29,7 +29,6 @@
   background-image: url(/images/paper_2.png);
   background-repeat: repeat;
   overflow: hidden;
-  color: #1385BE;
   -webkit-box-shadow: 0px 0px 1px #CCC;
      -moz-box-shadow: 0px 0px 1px #CCC;
           box-shadow: 0px 0px 1px #CCC;
@@ -51,10 +50,6 @@
   -webkit-box-shadow: 0 0 0;
      -moz-box-shadow: 0 0 0;
           box-shadow: 0 0 0;
-}
-
-.card.task {
-  background-image: url(/images/paper_blue.png);
 }
 
 .card.attached_image {

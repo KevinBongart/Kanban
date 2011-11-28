@@ -6,9 +6,16 @@ qa          = State.create(:position => 2, :limit => 2, :name => 'QA')
 deploy      = State.create(:position => 3, :limit => 2, :name => 'Deploy')
 done        = State.create(:position => 4, :limit => 0, :name => 'Done')
 
+colin = User.create(
+  :name => 'Colin',
+  :photo => 'http://img124.imageshack.us/img124/1067/bootstraphaircutlr0.jpg',
+  :state => development
+)
+
 story = Story.create(
   :name => 'Challenge recommendations',
   :description => 'Recommend relevant challenges to the user. He can then follow the challenge or dismiss the recommendation.',
+  :user => colin,
   :project => project,
   :state => development
 )
@@ -16,6 +23,7 @@ story = Story.create(
 story2 = Story.create(
   :name => 'User dashboard',
   :description => 'A user dashboard to see activities for the challenges users follow.',
+  :user => colin,
   :project => project,
   :state => development
 )
@@ -23,6 +31,7 @@ story2 = Story.create(
 Story.create(
   :name => 'New challenge header',
   :description => 'Displaying total prizes, number of followers and days left.',
+  :user => colin,
   :project => project,
   :state => development
 )
@@ -30,60 +39,70 @@ Story.create(
 story3 = Story.create(
   :name => 'Build "Details" tab of editing a challenge',
   :project => project,
+  :user => colin,
   :state => qa
 )
 
 story5 = Story.create(
   :name => 'Merge the link to the manage area into the challenges dropdown',
   :project => project,
+  :user => colin,
   :state => deploy
 )
 
 story4 = Story.create(
   :name => 'Update language for stages',
   :project => project,
+  :user => colin,
   :state => done
 )
 
 story6 = Story.create(
   :name => 'Do never deploy this',
   :project => project,
+  :user => colin,
   :state => done
 )
 
 story7 = Story.create(
   :name => 'Make this cool thing happen',
   :project => project,
+  :user => colin,
   :state => done
 )
 
 story8 = Story.create(
   :name => 'Clicking on any link goes on 404',
   :project => project,
+  :user => colin,
   :state => done
 )
 
 story9 = Story.create(
   :name => 'Host main app on TI-83',
   :project => project,
+  :user => colin,
   :state => done
 )
 
 story10 = Story.create(
   :name => 'Homepage redesign',
   :project => project,
+  :user => colin,
   :state => done
 )
 
 Story.create(
   :name => 'Segment users by rollout feature in google analytics',
   :project => project,
+  :user => colin,
   :state => backlog
 )
 
 Story.create(
   :name => 'Filter submissions should not show up when there is nothing to filter by',
   :project => project,
+  :user => colin,
   :state => development,
   :fast_lane => true
 )
@@ -91,6 +110,7 @@ Story.create(
 Story.create(
   :name => 'Submission message count is incorrect in Manage area',
   :project => project,
+  :user => colin,
   :state => backlog
 )
 

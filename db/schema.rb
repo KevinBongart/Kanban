@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111126035229) do
+ActiveRecord::Schema.define(:version => 20111128054741) do
 
   create_table "attached_copies", :force => true do |t|
     t.text     "content"
@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(:version => 20111126035229) do
     t.boolean  "icebox",      :default => false
     t.boolean  "fast_lane",   :default => false
     t.integer  "position"
+    t.integer  "user_id"
   end
 
   create_table "tasks", :force => true do |t|

@@ -1,11 +1,17 @@
+<% link_on_image ||= false %>
+
 <%= div_for_card card do %>
   <% if card.is_a?(AttachedCopy) %>
     <p><%= card.content %></p>
   <% elsif card.is_a?(AttachedImage) %>
-    <%= image_tag card.url %>
+    <% if link_on_image %>
+      <%= link_to image_tag(card.url), card.url %>
+    <% else %>
+      <%= image_tag card.url %>
+    <% end %>
   <% elsif card.is_a?(Task) %>
     <p><%= card.name %></p>
   <% elsif card.is_a?(Story) %>
-    <p><%= card.name %></p>
+    <p><%= link_to card.name, card %></p>
   <% end %>
 <% end %>

@@ -3,6 +3,7 @@ class Story < ActiveRecord::Base
 
   belongs_to :project
   belongs_to :state
+  belongs_to :user
 
   has_many :users
   has_many :tasks
