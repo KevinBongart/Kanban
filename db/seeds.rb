@@ -92,14 +92,15 @@ story10 = Story.create(
   :state => done
 )
 
-Story.create(
+story11 = Story.create(
   :name => 'Segment users by rollout feature in google analytics',
   :project => project,
   :user => colin,
-  :state => backlog
+  :state => backlog,
+  :users => [colin]
 )
 
-Story.create(
+story12 = Story.create(
   :name => 'Filter submissions should not show up when there is nothing to filter by',
   :project => project,
   :user => colin,
@@ -107,7 +108,7 @@ Story.create(
   :fast_lane => true
 )
 
-Story.create(
+story13 = Story.create(
   :name => 'Submission message count is incorrect in Manage area',
   :project => project,
   :user => colin,
@@ -353,7 +354,8 @@ nikki = User.create(
 
 holly = User.create(
   :name => 'Holly',
-  :photo => 'http://f.cl.ly/items/2E0R211L1K2K3B0I2304/Screen%20Shot%202011-11-28%20at%201.10.25%20AM.png'
+  :photo => 'http://f.cl.ly/items/2E0R211L1K2K3B0I2304/Screen%20Shot%202011-11-28%20at%201.10.25%20AM.png',
+  :story => story13
 )
 
 Comment.create(

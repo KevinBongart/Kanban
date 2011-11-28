@@ -21,6 +21,17 @@
     <div class="span3">
       <h3><%= state.name %></h3>
       <%= content_tag_for :ul, state do %>
+      <% if state == @states.first %>
+        <div id="new-story-button">
+          <%= link_to '+', '#' %>
+        </div>
+        <div id="new-story" class="card">
+          <%= form_for @new_story do |f| %>
+            <%= f.text_field :name %>
+            <%= f.submit %>
+          <% end %>
+        </div>
+      <% end %>
       <div class="drop-zone"></div>
         <% state.stories.normal.each do |story| %>
           <%= render 'stacks/stack', :story => story %>

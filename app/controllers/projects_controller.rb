@@ -16,6 +16,7 @@ class ProjectsController < ApplicationController
     @project = Project.find(params[:id])
     @states  = State.all
     @inactive_users = User.inactive
+    @new_story = Story.new
 
     respond_to do |format|
       format.html # show.html.erb
