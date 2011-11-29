@@ -21,11 +21,18 @@ $(function() {
     connectWith:['.state'],
     cursor: 'move',
     items: 'li',
+    start: function(){
+      $(this).addClass('droppable');
+    },
     over: function(){
+      $('.droppable').removeClass('droppable');
       $(this).addClass('droppable');
     },
     out: function(){
-      $(this).removeClass('droppable');
+      $('.droppable').removeClass('droppable');
+    },
+    stop: function(){
+      $('.droppable').removeClass('droppable');
     },
     update: function(){
       var data = {};
@@ -45,13 +52,18 @@ $(function() {
     connectWith:['.users'],
     cursor: 'move',
     items: 'img',
+    start: function(){
+      $(this).addClass('droppable');
+    },
     over: function(){
+      $('.droppable').removeClass('droppable');
       $(this).addClass('droppable');
     },
     out: function(){
-      $(this).removeClass('droppable');
+      $('.droppable').removeClass('droppable');
     },
     stop: function(){
+      $('.droppable').removeClass('droppable');
       update_inactive_users_text();
     },
     update: function(){
