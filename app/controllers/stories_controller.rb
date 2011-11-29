@@ -46,7 +46,11 @@ class StoriesController < ApplicationController
     @story.project = Project.first
 
     if @story.save
-      redirect_to root_path
+      if request.xhr?
+        render 'new_story'
+      else
+        redirect_to root_path
+      end
     end
   end
 

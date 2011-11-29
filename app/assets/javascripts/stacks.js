@@ -1,4 +1,4 @@
-$(function() {
+$(function(){
   var update_inactive_users_text = function(){
     var users = $('#inactive-users .user').length;
     var text  = '';
