@@ -1,0 +1,28 @@
+<div class="span3">
+  <h3>
+    <%= state.name %>
+    <% if state == @states.first %>
+      <span id="new-story-button">
+        <%= link_to '+', '#' %>
+      </span>
+    <% end %>
+  </h3>
+  <%= content_tag_for :ul, state do %>
+
+    <% if state == @states.first %>
+      <div id="new-story" class="card">
+        <%= form_for @new_story do |f| %>
+          <%= f.text_field :name %>
+          <%= f.submit :class => 'hidden' %>
+        <% end %>
+      </div>
+    <% end %>
+
+    <div class="drop-zone"></div>
+
+    <% state.stories.normal.each do |story| %>
+      <%= render 'stacks/stack', :story => story %>
+    <% end %>
+
+  <% end %>
+</div>

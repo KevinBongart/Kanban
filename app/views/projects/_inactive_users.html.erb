@@ -1,0 +1,15 @@
+<div class="users clearfix" id="inactive-users">
+  <% User.inactive.each do |user| %>
+    <%= image_tag user.photo, :class => 'user photo', :id => "user_#{user.id}" %>
+  <% end %>
+  <h3>
+    <% if User.inactive.size == 0 %>
+      Nobody is
+    <% elsif User.inactive.size == 1 %>
+      is
+    <% else %>
+      are
+    <% end %>
+    slacking off.
+  </h3>
+</div>

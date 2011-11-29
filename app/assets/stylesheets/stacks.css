@@ -5,22 +5,6 @@
   margin-bottom: 32px;
 }
 
-#expanded-stack {
-  display: none;
-  position: absolute;
-  width: 920px;
-  background-color: #3B3B3B;
-  opacity: 0.9;
-  border: 4px solid white;
-  padding-top: 16px;
-  -webkit-border-radius: 8px;
-     -moz-border-radius: 8px;
-          border-radius: 8px;
-  -webkit-box-shadow: 0 0 10px #3B3B3B;
-     -moz-box-shadow: 0 0 10px #3B3B3B;
-          box-shadow: 0 0 10px #3B3B3B;
-}
-
 .card {
   height: 80px;
   width: 140px;
@@ -41,15 +25,6 @@
   position: absolute;
   top: 0;
   left: 0;
-}
-
-#expanded-stack .card {
-  float: left;
-  margin-left: 20px;
-  margin-bottom: 16px;
-  -webkit-box-shadow: 0 0 0;
-     -moz-box-shadow: 0 0 0;
-          box-shadow: 0 0 0;
 }
 
 .card.attached_image {
