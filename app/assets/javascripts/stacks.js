@@ -17,6 +17,40 @@ $(function(){
     $('#inactive-users h3').html(text);
   };
 
+  kanban.make_users_sortable = function(){
+    $('.users').sortable({
+      connectWith:['.users'],
+      cursor: 'move',
+      items: 'img',
+      start: function(){
+        $(this).addClass('droppable');
+      },
+      over: function(){
+        $('.droppable').removeClass('droppable');
+        $(this).addClass('droppable');
+      },
+      out: function(){
+        $('.droppable').removeClass('droppable');
+      },
+      stop: function(){
+        $('.droppable').removeClass('droppable');
+        update_inactive_users_text();
+      },
+      update: function(){
+        var data = {};
+        data['story'] = $(this).attr('id');
+        data['users'] = $(this).sortable('toArray');
+
+        $.ajax({
+          type: 'post',
+          data: data,
+          dataType: 'script',
+          url: '/users/sort'
+        })
+      }
+    });
+  };
+
   $('.state').sortable({
     connectWith:['.state'],
     cursor: 'move',
@@ -48,35 +82,5 @@ $(function(){
     }
   });
 
-  $('.users').sortable({
-    connectWith:['.users'],
-    cursor: 'move',
-    items: 'img',
-    start: function(){
-      $(this).addClass('droppable');
-    },
-    over: function(){
-      $('.droppable').removeClass('droppable');
-      $(this).addClass('droppable');
-    },
-    out: function(){
-      $('.droppable').removeClass('droppable');
-    },
-    stop: function(){
-      $('.droppable').removeClass('droppable');
-      update_inactive_users_text();
-    },
-    update: function(){
-      var data = {};
-      data['story'] = $(this).attr('id');
-      data['users'] = $(this).sortable('toArray');
-
-      $.ajax({
-        type: 'post',
-        data: data,
-        dataType: 'script',
-        url: '/users/sort'
-      })
-    }
-  });
+  kanban.make_users_sortable();
 });

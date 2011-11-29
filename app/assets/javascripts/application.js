@@ -10,3 +10,5 @@
 //= require jquery.reverseorder
 //= require twitter/bootstrap
 //= require_tree .
+
+var kanban = new Object;
