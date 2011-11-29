@@ -6,6 +6,19 @@ ul.state {
   padding-bottom: 32px;
 }
 
+.state-limit {
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.state-limit span.alert {
+  color: #FF3B52;
+}
+
 ul.state .drop-zone {
   display: none;
   position: absolute;

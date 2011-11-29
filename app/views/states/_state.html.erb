@@ -7,6 +7,21 @@
       </span>
     <% end %>
   </h3>
+
+  <p class="state-limit">
+    <% if state == @states.first %>
+      Next 5 stories
+    <% elsif state == @states.last %>
+      Last 5 stories
+    <% else %>
+      <% if state.stories.size > state.limit %>
+        <span class="alert">Only <%= state.limit %> stories allowed!</span>
+      <% else %>
+        <%= state.limit %> stories allowed
+      <% end %>
+    <% end %>
+  </p>
+
   <%= content_tag_for :ul, state do %>
 
     <% if state == @states.first %>
