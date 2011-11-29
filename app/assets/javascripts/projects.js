@@ -27,8 +27,20 @@ $(function(){
         $('#new-story').toggle();
         switch_new_story_button_text();
       }
-    })
+    });
 
     return false;
-  })
+  });
+
+  $('#refresh').click(function(){
+    $.ajax({
+      dataType: 'json',
+      url: '/projects/1',
+      success: function(data){
+        console.log(data);
+      }
+    });
+
+    return false;
+  });
 });

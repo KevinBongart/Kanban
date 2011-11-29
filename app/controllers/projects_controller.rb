@@ -13,14 +13,20 @@ class ProjectsController < ApplicationController
   # GET /projects/1
   # GET /projects/1.json
   def show
-    @project = Project.find(params[:id])
-    @states  = State.all
-    @inactive_users = User.inactive
-    @new_story = Story.new
+    @states = State.all
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render :json => @project }
+    if request.xhr?
+      json = {}
+
+      @states.each do |state|
+        json["state_#{state.id}"] = state.stories.map { |story| "story_#{story.id}" }
+      end
+
+      render :json => json
+    else
+      @project        = Project.find(params[:id])
+      @inactive_users = User.inactive
+      @new_story      = Story.new      
     end
   end
 

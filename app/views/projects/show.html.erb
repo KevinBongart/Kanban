@@ -3,6 +3,8 @@
 <div class="row">
   <%= render 'inactive_users' %>
 
+  <%= link_to 'Refresh', root_path, :id => 'refresh' %>
+
   <% @states.each do |state| %>
     <%= render state %>
   <% end %>
