@@ -13,7 +13,7 @@ class ProjectsController < ApplicationController
   # GET /projects/1
   # GET /projects/1.json
   def show
-    @states = State.all
+    @states = State.all(:include => :stories)
 
     if request.xhr?
       json = {}

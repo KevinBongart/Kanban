@@ -126,8 +126,43 @@ Task.create(
   :story => story
 )
 
+Task.create(
+  :name => "Four loko tofu retro next level biodiesel. Biodiesel beard helvetica Austin 8-bit brunch. Keffiyeh beard farm-to-table, organic mcsweeney's portland brooklyn wolf.",
+  :story => story
+)
+
 AttachedImage.create(
   :url => 'http://f.cl.ly/items/3p3s3q0G1X1U26090T1G/Screen%20Shot%202011-11-21%20at%2010.39.24%20PM.png',
+  :story => story
+)
+
+AttachedImage.create(
+  :url => 'http://f.cl.ly/items/3D3l1Z1v2K040e2y2F04/Screen%20Shot%202011-11-29%20at%2010.15.29%20PM.png',
+  :story => story
+)
+
+AttachedImage.create(
+  :url => 'http://f.cl.ly/items/1y1p0M3x350C3L0z2X0R/Screen%20Shot%202011-11-29%20at%2010.16.24%20PM.png',
+  :story => story
+)
+
+AttachedImage.create(
+  :url => 'http://f.cl.ly/items/1C083P3i0C1I0B392r3l/Screen%20Shot%202011-11-29%20at%2010.16.56%20PM.png',
+  :story => story
+)
+
+AttachedImage.create(
+  :url => 'http://f.cl.ly/items/3J082k17092D140f0N2S/tumblr_lvcb8abTJj1qz6f9yo1_r1_500.jpg',
+  :story => story
+)
+
+AttachedCopy.create(
+  :content => "Food truck irony retro, whatever 8-bit yr lomo cred iphone leggings messenger bag tattooed lo-fi. Cred you probably haven't heard of them tofu, messenger bag artisan squid fixie freegan sartorial VHS ethical.",
+  :story => story
+)
+
+AttachedCopy.create(
+  :content => "Quinoa gentrify next level banksy, seitan dreamcatcher irony banh mi aesthetic sartorial yr food truck cred trust fund iphone. +1 iphone vice wayfarers 3 wolf moon, tumblr williamsburg art party quinoa retro put a bird on it farm-to-table cred echo park. Raw denim messenger bag etsy art party, food truck banksy keffiyeh thundercats aesthetic you probably haven't heard of them fap irony. Cardigan fanny pack dreamcatcher biodiesel irony, hoodie vegan artisan. Sustainable keffiyeh PBR, salvia brooklyn synth locavore. Quinoa raw denim messenger bag squid craft beer, single-origin coffee sustainable high life gluten-free thundercats photo booth freegan VHS vice. Cliche messenger bag viral, cardigan beard helvetica portland stumptown irony fap ethical gluten-free mlkshk.",
   :story => story
 )
 

@@ -32,7 +32,7 @@ $(function(){
     return false;
   });
 
-  $('#refresh').click(function(){
+  setInterval(function(){
     $.ajax({
       dataType: 'json',
       url: '/projects/1',
@@ -40,7 +40,5 @@ $(function(){
         console.log(data);
       }
     });
-
-    return false;
-  });
+  }, 3000);
 });

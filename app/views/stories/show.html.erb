@@ -1,9 +1,14 @@
 <div id="header">
   <h3><%= @story.name %></h3>
+
+  <p><%= @story.description %></p>
+
   <p>
     Requested by <%= link_to @story.user.name, @story.user.photo %>
-    <%= time_ago_in_words(@story.created_at) %> ago
+    <%= time_ago_in_words(@story.created_at) %> ago |
+    <%= link_to "Edit", edit_story_path(@story) %>
   </p>
+
   <div class="users clearfix story-page">
     <% @story.users.each do |user| %>
       <%= image_tag user.photo, :class => 'user photo', :id => "user_#{user.id}" %>
@@ -11,31 +16,43 @@
   </div>
 </div>
 
+<div class="row">
+  <div class="span-one-third">
+    <div id="tasks" class="block">
+      <h4>Tasks</h4>
+      <ul>
+        <% @story.tasks.each do |task| %>
+          <li>
+            <p>
+              <input type="checkbox" <%= "checked" if task.done %> />
+              <%= task.name %>
+            </p>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
 
-<h4>Tasks</h4>
-<ul>
-  <% @story.tasks.each do |task| %>
-    <li>
-      <p><input type="checkbox" <%= "checked" if task.done %> />
-      <%= task.name %></p>
-    </li>
-  <% end %>
-</ul>
-
-<% if @story.attached_images.any? %>
-  <h4>Images</h4>
-  <ul>
-    <% @story.attached_images.each do |image| %>
-      <%= render 'stacks/card', :card => image, :link_on_image => true %>
+  <div id="images" class="span-two-thirds">
+    <% if @story.attached_images.any? %>
+      <% @story.attached_images.each_with_index do |image, i| %>
+        <%= link_to image_tag(image.url), image.url, :class => "#{'last' if i % 3 == 2}" %>
+      <% end %>
     <% end %>
-  </ul>
-<% end %>
+  </div>
+</div>
 
 <% if @story.attached_copies.any? %>
-  <h4>Copy</h4>
-  <% @story.attached_copies.each do |copy| %>
-    <p><%= copy.content %></p>
-  <% end %>
+  <div id="copy" class="block">
+    <h4>Copy</h4>
+    <% @story.attached_copies.each do |copy| %>
+      <p class="<%= 'last' if copy == @story.attached_copies.last %>">
+        <%= copy.content %><br /><br />
+        <%= link_to "Edit", edit_attached_copy_path(copy) %> |
+        <%= link_to "Delete", "#" %>
+      </p>
+    <% end %>
+  </div>
 <% end %>
 
 <h4>Comments</h4>

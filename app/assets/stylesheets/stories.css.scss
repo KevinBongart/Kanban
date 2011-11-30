@@ -6,8 +6,9 @@
   margin-bottom: 32px;
 }
 
-#header p {
-  text-align: center;
+#header h3 {
+  text-align: left;
+  margin-bottom: 16px;
 }
 
 h4 {
@@ -18,9 +19,53 @@ h4 {
   letter-spacing: 1px;
 }
 
+.block {
+  background-color: white;
+  padding: 24px;
+  border: 1px solid #CCCCCC;
+  -webkit-box-shadow: 0px 0px 1px #CCC;
+     -moz-box-shadow: 0px 0px 1px #CCC;
+          box-shadow: 0px 0px 1px #CCC;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
+}
+
+#images a {
+  float: left;
+  margin-right: 25px;
+  margin-bottom: 25px;
+}
+
+#images a.last {
+  margin-right: 0;
+}
+
+#images img {
+  max-width: 184px;
+  max-height: 184px;
+  border: 1px solid #CCCCCC;
+  padding: 2px;
+  background-image: url(/images/paper_2.png);
+  background-repeat: repeat;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 0px 1px #CCC;
+     -moz-box-shadow: 0px 0px 1px #CCC;
+          box-shadow: 0px 0px 1px #CCC;
+}
+
+#copy p {
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #CCCCCC;
+}
+
+#copy p.last {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: transparent;
 }
 
 .comment {
