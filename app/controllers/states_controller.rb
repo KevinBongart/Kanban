@@ -13,7 +13,9 @@ class StatesController < ApplicationController
   # GET /states/1
   # GET /states/1.json
   def show
-    @state = State.find(params[:id])
+    @state = State.find(params[:id], :include => :stories)
+    @active_stories = @state.stories.first(5)
+    @inactive_stories = @state.stories - @active_stories
 
     respond_to do |format|
       format.html # show.html.erb

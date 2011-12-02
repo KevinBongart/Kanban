@@ -1,15 +1,19 @@
-<p id="notice"><%= notice %></p>
+<h3><%= @state.name %></h3>
 
-<p>
-  <b>Name:</b>
-  <%= @state.name %>
-</p>
+<h4>Active stories</h4>
+<ul>
+  <% @active_stories.each do |story| %>
+    <li>
+      <%= link_to story.name, story %>
+    </li>
+  <% end %>
+</ul>
 
-<p>
-  <b>Position:</b>
-  <%= @state.position %>
-</p>
-
-
-<%= link_to 'Edit', edit_state_path(@state) %> |
-<%= link_to 'Back', states_path %>
+<h4>Inactive stories</h4>
+<ul>
+  <% @inactive_stories.each do |story| %>
+    <li>
+      <%= link_to story.name, story %>
+    </li>
+  <% end %>
+</ul>
