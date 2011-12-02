@@ -35,7 +35,7 @@
 
     <div class="drop-zone"></div>
 
-    <% state.stories_to_display.normal.each do |story| %>
+    <% state.stories.normal.each do |story| %>
       <%= render 'stacks/stack', :story => story %>
     <% end %>
 
