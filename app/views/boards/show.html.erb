@@ -1,5 +1,17 @@
-<h1><%= @board.title %></h1>
+<div class="row">
+  <div class="large-12 columns">
+    <h1><%= @board.title %></h1>
+    <ul>
+      <%= render @inactive_users %>
+    </ul>
+  </div>
+</div>
 
-<ul>
-  <%= render @board.lists %>
-</ul>
+<div class="row">
+  <div class="columns">
+    <%= content_tag :ul, class: "small-block-grid-#{@board.lists.count}" do %>
+      <%= render @board.lists %>
+    <% end %>
+  </div>
+</div>
+

@@ -1,9 +1,9 @@
 <li>
-  <%= list.title %>
-  <% if list.limit > 0 %>
-    (<%= list.limit %>)
-  <% end %>
-  <ul>
+  <h4 class="text-center"><%= list.title %></h4>
+
+  <%= render "lists/limit", list: list %>
+
+  <ul class="no-bullet">
     <%= render list.cards %>
   </ul>
 </li>

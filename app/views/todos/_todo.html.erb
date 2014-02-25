@@ -1,4 +1,3 @@
-<li>
-  <%= check_box_tag :completed, 1, todo.completed? %>
+<%= div_for todo, class: "card rotate-#{rand(6) + 1}" do %>
   <%= todo.title %>
-</li>
+<% end %>

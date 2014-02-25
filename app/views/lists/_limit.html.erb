@@ -1,0 +1,11 @@
+<p class="text-center">
+  <% if list == @board.lists.first %>
+    Next 5 cards
+  <% elsif list == @board.lists.last %>
+    Last 5 cards
+  <% elsif list.limit > 0 %>
+    <%= list.limit %>
+  <% else %>
+    <br />
+  <% end %>
+</p>
