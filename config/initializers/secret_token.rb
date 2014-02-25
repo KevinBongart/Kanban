@@ -1,7 +1,12 @@
 # Be sure to restart your server when you modify this file.
 
-# Your secret key for verifying the integrity of signed cookies.
+# Your secret key is used for verifying the integrity of signed cookies.
 # If you change this key, all old signed cookies will become invalid!
+
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Kanban::Application.config.secret_token = '143df1d9a548dce0e874d270edb6120df7afebf9d79c56e7386f8993e17495f6c12c496be56b2b8f86d8c33fb68223e82a73854023d6fca95d7d2abeb4029f71'
+# You can use `rake secret` to generate a secure secret key.
+
+# Make sure your secret_key_base is kept private
+# if you're sharing your code publicly.
+Kanban::Application.config.secret_key_base = '17e1bbedbdf6ee886c7b6847230e02fcc58edf7dca08e7d604299ddbacd257fa767d551a2590d329d286eefd540bd755a0c8aa7d3ba992e77c5c4bdae4b5ce6b'
