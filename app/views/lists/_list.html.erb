@@ -1,0 +1,9 @@
+<li>
+  <%= list.title %>
+  <% if list.limit > 0 %>
+    (<%= list.limit %>)
+  <% end %>
+  <ul>
+    <%= render list.cards %>
+  </ul>
+</li>

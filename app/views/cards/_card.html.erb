@@ -1,0 +1,11 @@
+<li>
+  <%= card.title %>
+  <% if card.users.any? %>
+    (<%= card.users.map(&:name).to_sentence %>)
+  <% end %>
+  <% if card.todos.any? %>
+    <ul>
+      <%= render card.todos %>
+    </ul>
+  <% end %>
+</li>
